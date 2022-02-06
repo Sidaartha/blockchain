@@ -24,3 +24,18 @@ main.add_url_rule(
     view_func=controller.is_valid,
     methods=["GET"],
 )
+main.add_url_rule(
+    rule="/add_transaction",
+    view_func=controller.add_transaction,
+    methods=["POST"],
+)
+main.add_url_rule(
+    rule="/connect_node",
+    view_func=controller.connect_node,
+    methods=["POST"],
+)
+main.add_url_rule(
+    rule="/replace_chain",
+    view_func=controller.replace_chain,
+    methods=["GET"],
+)
